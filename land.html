@@ -4,7 +4,7 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Page Title</title>
+    <title>OAT </title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='land.css'>
 
@@ -14,17 +14,17 @@
     <div class="website-content">
         <div class="header">
             <div class="h1">
-                <h1>OAT</h1>
+                <h1 id="logo1">OAT</h1>
             </div>
             <div class="header-revealer"></div>
         </div>
         
     </div>
     <div class="conteudo">
-        <img src="Rectangle 3966 (1).png" alt="">
+        <img src="Rectangle 3966 (1).png" id="img1" alt="">
         <div class="texto">
-            <b>Sobre</b>
-            <p>O Projeto OAT (Oportunidade, Acessibilidade e Tecnologia) oferece educação gratuita para jovens em
+            <b id="tittle1">Sobre</b>
+            <p id="text1">O Projeto OAT (Oportunid ade, Acessibilidade e Tecnologia) oferece educação gratuita para jovens em
                 comunidades carentes. Começamos com oficinas de informática, onde os alunos montam seus próprios
                 computadores, que levam para casa. Depois, têm acesso a uma plataforma de cursos profissionalizantes
                 em áreas de alta demanda. Utilizamos tecnologia e design inovador para tornar o aprendizado
@@ -33,12 +33,14 @@
         </div>
 
         <div class="galeria">
-            <div class="grid-galeria">
+            <div class="grid-galeria" id="dobra1">
                 <img src="Mídia.jpg" alt="">
                 <img src="shared image (5).jpg" alt="">
                 <img src="shared image (6).jpg" alt="">
             </div>
         </div>
+
+        
     </div>
     <div class="loading-screen">
         <div class="loader">
@@ -78,6 +80,30 @@
             <div class="num">9</div>
         </div>
     </div>
+    <script type="text/javascript"> 
+    
+        (function() {
+               var script = document.createElement("script");
+               script.src = "https://unpkg.com/scrollreveal";
+               script.async = true;
+               script.onload = function() {
+                   iniciarScrollReveal();
+               };
+               document.head.appendChild(script);
+           })();
+       
+           function iniciarScrollReveal() {
+           if (typeof ScrollReveal !== "undefined") {
+               ScrollReveal().reveal("#img1, #text1, #tittle1, #dobra1",  {
+                   duration: 1600,
+                   origin: "bottom",
+                   distance: "90px",
+                   delay: 15,
+                   reset: true
+               });
+           }
+       }
+       </script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js'></script>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
@@ -191,7 +217,28 @@
                 amount: 0.1,
             },
         });
+        
+       
     </script>
+    <script type="text/javascript">$('#math_expression').closest('div').remove(); </script>
+    <script type="text/javascript"> </script>
+    
+    <script type="text/javascript">$('#math_expression').closest('div').remove(); </script>
+    <script type="text/javascript">
+        window.addEventListener('scroll', function() {
+        var element = document.getElementById('rd-section-m7ash48s');
+        element.style.position = window.scrollY >= 190 ? 'fixed' : 'static';
+        element.style.transition = window.scrollY >= 190 ? 'all 3s' : '';
+        });
+    </script>
+    
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PBT9XLMZ"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    
+    
+   
 </body>
 
 </html>
