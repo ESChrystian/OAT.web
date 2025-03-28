@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Photo Gallery</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='photo.css'>
+    <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+</head>
+
+<body>
+
+    <section class="gallery">
+
+        <div class="title-photo">photografic</div>
+        <div class="imgPreview"></div>
+        <div class="imgContainer noImg"></div>
+
+        <div class="imgContainer">
+            <div class="wrap">
+                <img src="download (3).jpeg" alt="img" />
+            </div>
+        </div>
+
+        <div class="imgContainer noImg"></div>
+        <div class="imgContainer noImg"></div>
+        <div class="imgContainer noImg"></div>
+
+        <div class="imgContainer">
+            <div class="wrap">
+                <img src="download (4).jpeg" alt="img" />
+            </div>
+        </div>
+
+        <div class="imgContainer">
+            <div class="wrap">
+                <img src="download (5).jpeg" alt="img">
+            </div>
+        </div>
+
+        <div class="imgContainer">
+            <div class="wrap">
+                <img src="download (6).jpeg" alt="img">
+            </div>
+        </div>
+
+        <div class="imgContainer">
+            <div class="wrap">
+                <img src="download (7).jpeg" alt="img">
+            </div>
+        </div>
+
+        <div class="imgContainer">
+            <div class="wrap">
+                <img src="Уличные фотографии неоднозначного Нью-Йорка 1980-х_ Фотограф Стивен Сигел.jpeg" alt="img">
+            </div>
+        </div>
+
+        <div class="imgContainer">
+            <div class="wrap">
+                <img src="download (9).jpeg" alt="img">
+            </div>
+        </div>
+
+        <div class="imgContainer">
+            <div class="wrap">
+                <img src="Laura Zalenga.jpeg" alt="img">
+            </div>
+        </div>
+
+        <div class="imgContainer noImg"></div>
+        <div class="imgContainer noImg"></div>
+        <div class="imgContainer noImg"></div>
+        <div class="imgContainer noImg"></div>
+
+        <div class="imgContainer">
+            <div class="wrap">
+                <img src="download (10).jpeg" alt="img">
+            </div>
+        </div>
+
+        <div class="imgContainer">
+            <div class="wrap">
+                <img src="ig_ @anajugmss.jpeg" alt="img">
+            </div>
+        </div>
+
+        <div class="imgContainer noImg"></div>
+        <div class="imgContainer noImg"></div>
+
+        <div class="imgContainer">
+            <div class="wrap">
+                <img src="Ned Doheny - Separate Oceans.jpeg" alt="img">
+            </div>
+        </div>
+
+        <div class="imgContainer noImg"></div>
+
+        <div class="imgContainer">
+            <div class="wrap">
+                <img src="download (11).jpeg" alt="img">
+            </div>
+        </div>
+
+    </section>
+
+    <script src="https://assets.codepen.io/16327/Flip.min.js"></script>
+    <script>
+const gallery = document.querySelector(".gallery");
+const imgPreview = document.querySelector(".imgPreview");
+const imgs = document.querySelectorAll(".imgContainer");
+
+let isimgPreviewOpen = false;
+let activeImg = null;
+let activeImgImg = null;
+let activeImgParent = null;
+
+imgs.forEach((img) => {
+    let theimgMask = img.querySelector(".wrap");
+    let theImg = img.querySelector("img");
+
+    if (!theImg) return; // Pula os .noImg que não têm imagem
+
+    img.addEventListener("click", () => {
+        const imgState = Flip.getState([theimgMask, theImg]);
+        gsap.set(imgPreview, { autoAlpha: 1 });
+        activeImg = theimgMask;
+        activeImgImg = theimgMask.querySelector("img");
+        activeImgParent = theimgMask.parentNode;
+        imgPreview.appendChild(theimgMask);
+
+        Flip.from(imgState, {
+            duration: 1,
+            ease: "power3.inOut",
+            scale: true,
+            onStart: () => {
+                imgPreview.classList.add("imgPreview--active");
+            },
+            onComplete: () => {
+                isimgPreviewOpen = true;
+            },
+        });
+    });
+});
+
+imgPreview.addEventListener("click", function (e) {
+    console.log(e.target);
+    const activeImgState = Flip.getState([activeImg, activeImgImg]);
+
+    activeImgParent.appendChild(activeImg);
+
+    Flip.from(activeImgState, {
+        duration: 1,
+        ease: "power3.inOut",
+        absolute: true,
+        scale: true,
+        zIndex: 2000,
+        nested: true,
+        onStart: () => {
+            imgPreview.classList.remove("imgPreview--active");
+        },
+        onComplete: () => {
+            isimgPreviewOpen = false;
+            gsap.set(imgPreview, { autoAlpha: 0 });
+        },
+    });
+});
+
+    </script>
+</body>
+</html>
