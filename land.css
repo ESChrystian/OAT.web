@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 * {
@@ -7,10 +6,10 @@
     box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
     height: 100vh;
     background-color: #000;
-    color: #fafafa;
     font-family: Montserrat, sans-serif;
 
 }
@@ -58,7 +57,7 @@ html, body {
 }
 
 .loader {
-    position:absolute;
+    position: absolute;
     top: 50%;
     left: 50%;
     width: 300px;
@@ -101,6 +100,7 @@ html, body {
     flex-direction: column;
     width: 100%;
 }
+
 .texto {
     height: 100%;
     width: 50%;
@@ -115,7 +115,7 @@ html, body {
     padding: 90px;
     background: #242424;
     margin-top: 150px;
-    
+
 }
 
 .galeria img {
@@ -134,44 +134,40 @@ html, body {
 b {
     font-size: 34px;
 }
+
 .header {
     position: relative;
     height: 500px;
     width: 100%;
     display: flex;
-    align-items:  center;
+    align-items: center;
     justify-content: center;
 }
 
 .h1 {
     display: flex;
-
-
-}
-
-h1 {
+    color: #fafafa;
     font-size: 80px;
-
 }
 
 .header .h1 h1 {
-    text-align:center;
+    text-align: center;
     position: relative;
     top: 80px;
-    margin:0 10px;
+    margin: 0 10px;
     text-transform: uppercase;
     font-weight: 400;
 }
 
 .header-revealer {
     position: absolute;
-    top:0;
-    width:100%;
+    top: 0;
+    width: 100%;
     height: 100%;
 }
 
 .header-revealer:after {
-    content:"";
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
@@ -180,3 +176,95 @@ h1 {
     background-color: #0000;
 }
 
+
+.cont-pesquisa {
+    padding: 90px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button {
+    padding: 10px;
+    width: 500px;
+    background-color: #fafafa;
+    color: black;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+}
+/* Modal */
+#modal {
+    position: fixed;
+    left: 50%;
+    top: -50%;
+    transform: translate(-50%, 10%);
+    z-index: 10;
+    background-color: #fafafa;
+    width: 1200px;
+    max-width: 90%;
+    padding: 1.2rem;
+    border-radius: 5px;
+    
+}
+iframe {
+    width: 100%;
+    height: 300px;
+
+}
+
+#fade {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 5;
+    
+}
+
+#tittle1 {
+    color: #fafafa;
+}
+
+#text1 {
+    color: #fafafa;
+}
+
+#fade,
+#modal {
+    transition: 0.5s;
+    opacity: 0;
+    pointer-events: none;
+}
+
+#close-modal {
+    padding: 5px;
+    width: 100px;
+    max-width: 90%;
+}
+
+#modal .header-modal {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+#modal.hide,
+#fade.hide {
+    opacity: 1;
+    pointer-events: all;
+}
+
+#modal.hide {
+    top: 0;
+}
+
+.text-modal {
+    padding: 15px;
+    text-align: justify;
+}

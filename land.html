@@ -24,13 +24,13 @@
         <img src="Rectangle 3966 (1).png" id="img1" alt="">
         <div class="texto">
             <h2 id="tittle1">Sobre</h3>
-            <p id="text1">O Projeto OAT (Oportunidade, Acessibilidade e Tecnologia) oferece educação gratuita para
-                jovens em
-                comunidades carentes. Começamos com oficinas de informática, onde os alunos montam seus próprios
-                computadores, que levam para casa. Depois, têm acesso a uma plataforma de cursos profissionalizantes
-                em áreas de alta demanda. Utilizamos tecnologia e design inovador para tornar o aprendizado
-                envolvente e acessível. Nosso objetivo é transformar vidas por meio da educação e inclusão digital.
-            </p>
+                <p id="text1">O Projeto OAT (Oportunidade, Acessibilidade e Tecnologia) oferece educação gratuita para
+                    jovens em
+                    comunidades carentes. Começamos com oficinas de informática, onde os alunos montam seus próprios
+                    computadores, que levam para casa. Depois, têm acesso a uma plataforma de cursos profissionalizantes
+                    em áreas de alta demanda. Utilizamos tecnologia e design inovador para tornar o aprendizado
+                    envolvente e acessível. Nosso objetivo é transformar vidas por meio da educação e inclusão digital.
+                </p>
         </div>
 
         <div class="galeria">
@@ -43,10 +43,43 @@
                 <img src="shared image (9).jpg" alt="">
             </div>
         </div>
-    </div>
-    <div class="equipe">
 
+        <div class="cont-pesquisa">
+            <button id="open-modal">Pesquisas</button>
+            <div id="fade"></div>
+            <div id="modal">
+                <div class="header-modal">
+                    <h2>Problemas Encontrados</h2>
+                    <button id="close-modal">Fechar</button>
+                </div>
+                <div class="text-modal">
+                    <ul>
+                        <li>Muitas pessoas enfrentam dificuldades em seu aprendizado porque a metodologia de ensino
+                            adotada por diversas plataformas de educação digital não é envolvente. O conteúdo, muitas
+                            vezes monótono e sem uma progressão clara, acaba desmotivando os alunos, levando à evasão.
+                        </li>
+                        <br>
+                        <li>Dois terços das crianças em idade escolar no mundo não têm acesso à internet em casa, diz
+                            novo relatório do UNICEF-ITU
+                            A União Internacional de Telecomunicações e o UNICEF pedem investimentos urgentes para
+                            reduzir a divisão digital que atualmente impede crianças e jovens de acessar aprendizagem
+                            digital de qualidade e oportunidades online, por isso a iniciativa OAT irá dar a
+                            oportunidades com as ferramentas precisas.</li>
+                    </ul>
+                </div>
+                <div class="header-modal">
+                    <h2>Analise de Causa Raiz</h2>
+
+                </div>
+                <div class="text-modal">
+                    <iframe
+                        src="https://docs.google.com/document/d/e/2PACX-1vSm7Y60egLWOEDQH0-s-FuU1D0jlHW_u4AMq680u9ABdZpYK1xK5XUN55H6hBZhdcRC5tUQvr7bAgtp/pub?embedded=true"></iframe>
+                </div>
+
+            </div>
+        </div>
     </div>
+
     <div class="loading-screen">
         <div class="loader">
             <div class="loader-1 bar"></div>
@@ -54,6 +87,8 @@
         </div>
     </div>
 
+
+    <!-- Animação Inicial -->
     <div class="counter">
         <div class="counter-1 digit">
             <div class="num">0</div>
@@ -85,6 +120,7 @@
             <div class="num">9</div>
         </div>
     </div>
+    <script src="land.js"></script>
     <script type="text/javascript">
 
         (function () {
@@ -214,7 +250,7 @@
             ease: "power1.inOut",
         });
 
-        gsap.to("h1", 1.5, {
+        gsap.to(".h1", 1.5, {
             delay: 7,
             y: -80,
             ease: "power4.inOut",
