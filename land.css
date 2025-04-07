@@ -185,7 +185,7 @@ b {
     justify-content: center;
 }
 
-button {
+.cont-pesquisa button { /*button*/
     padding: 10px;
     width: 500px;
     background-color: #fafafa;
@@ -268,3 +268,80 @@ iframe {
     padding: 15px;
     text-align: justify;
 }
+
+
+.conteiner {
+    width: 100%;
+    padding-bottom: 200px;
+}
+.card-list .card-item {
+    list-style: none;
+}
+.card-list .card-item .card-link {
+    user-select: none;
+    display: block;
+    background: #fff;
+    padding: 18px;
+    border: 2px solid transparent;
+    border-radius: 12px;
+    text-decoration: none;
+    transition: 0.2s ease;
+    box-shadow: none;
+}
+
+.card-list .card-item .card-link:hover {
+    border-color: orange;
+}
+
+.card-list .card-link .card-image {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.card-list .card-link .badge {
+    color: #fafafa;
+    padding: 8px 15px;
+    font-size: 0.95rem;
+    width: fit-content;
+    font-weight: 500;
+    border-radius: 50px;
+    margin: 16px 0 18px;
+    background-color: #242424;
+}
+
+.card-list .card-link .card-title {
+    font-size: 1.19rem;
+    color: #000;
+    font-weight: 600;
+}
+
+.card-list .card-link .card-button {
+    height: 35px;
+    width: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #242424;
+    border-radius: 50%;
+    margin: 30px 0 5px;
+    background: none;
+    cursor: pointer;
+    border: 2px solid #242424 ;
+    transform: rotate(-45deg);
+    transition: 0.4s ease;
+}
+
+i.card-button {
+    font-size: 26px;
+}
+
+.card-list .card-link:hover .card-button {
+    color: #fafafa;
+    background: #242424;
+
+}
+
+
