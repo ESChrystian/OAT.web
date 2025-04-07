@@ -7,7 +7,8 @@
     <title>OAT </title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='land.css'>
-
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 
 <body>
@@ -45,11 +46,10 @@
         </div>
 
         <div class="cont-pesquisa">
-            <button id="open-modal">Pesquisas</button>
+            <button id="open-modal">Problemas Identificados</button>
             <div id="fade"></div>
             <div id="modal">
                 <div class="header-modal">
-                    <h2>Problemas Encontrados</h2>
                     <button id="close-modal">Fechar</button>
                 </div>
                 <div class="text-modal">
@@ -67,19 +67,69 @@
                             oportunidades com as ferramentas precisas.</li>
                     </ul>
                 </div>
-                <div class="header-modal">
+                <!-- <div class="header-modal">
                     <h2>Analise de Causa Raiz</h2>
 
                 </div>
                 <div class="text-modal">
-                    <iframe
-                        src="https://docs.google.com/document/d/e/2PACX-1vSm7Y60egLWOEDQH0-s-FuU1D0jlHW_u4AMq680u9ABdZpYK1xK5XUN55H6hBZhdcRC5tUQvr7bAgtp/pub?embedded=true"></iframe>
-                </div>
-
+                                    </div> -->
+            </div>
+        </div>
+        <div class="conteiner swiper">
+            <div class="card-wrapper">
+                <ul class="card-list swiper-wrapper">
+                    <li class="card-item swiper-slide">
+                        <a href="" class="card-link">
+                            <img src="canva1.png" alt="" class="card-image">
+                            <p class="badge">Documento Canva</p>
+                            <h2 class="card-title">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati,
+                                iusto!</h2>
+                            <i class='card-button bx bx-right-arrow-alt'></i>
+                        </a>
+                    </li>
+                    <li class="card-item swiper-slide">
+                        <a href="" class="card-link">
+                            <img src="canva1.png" alt="" class="card-image">
+                            <p class="badge">Documento Canva</p>
+                            <h2 class="card-title">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati,
+                                iusto!</h2>
+                            <i class='card-button bx bx-right-arrow-alt'></i>
+                        </a>
+                    </li>
+                    <li class="card-item swiper-slide">
+                        <a href="" class="card-link">
+                            <img src="canva1.png" alt="" class="card-image">
+                            <p class="badge">Documento Canva</p>
+                            <h2 class="card-title">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati,
+                                iusto!</h2>
+                            <i class='card-button bx bx-right-arrow-alt'></i>
+                        </a>
+                    </li>
+                    <li class="card-item swiper-slide">
+                        <a href="" class="card-link">
+                            <img src="canva1.png" alt="" class="card-image">
+                            <p class="badge">Documento Canva</p>
+                            <h2 class="card-title">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati,
+                                iusto!</h2>
+                            <i class='card-button bx bx-right-arrow-alt'></i>
+                        </a>
+                    </li>
+                    <li class="card-item swiper-slide">
+                        <a href="" class="card-link">
+                            <img src="canva1.png" alt="" class="card-image">
+                            <p class="badge">Documento Canva</p>
+                            <h2 class="card-title">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati,
+                                iusto!</h2>
+                            <i class='card-button bx bx-right-arrow-alt'></i>
+                        </a>
+                    </li>
+                </ul>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
             </div>
         </div>
     </div>
-
     <div class="loading-screen">
         <div class="loader">
             <div class="loader-1 bar"></div>
@@ -120,32 +170,10 @@
             <div class="num">9</div>
         </div>
     </div>
-    <script src="land.js"></script>
-    <script type="text/javascript">
-
-        (function () {
-            var script = document.createElement("script");
-            script.src = "https://unpkg.com/scrollreveal";
-            script.async = true;
-            script.onload = function () {
-                iniciarScrollReveal();
-            };
-            document.head.appendChild(script);
-        })();
-
-        function iniciarScrollReveal() {
-            if (typeof ScrollReveal !== "undefined") {
-                ScrollReveal().reveal("#img1, #text1, #tittle1, #dobra1", {
-                    duration: 1600,
-                    origin: "bottom",
-                    distance: "30px",
-                    delay: 0.5,
-                    reset: true
-                });
-            }
-        }
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js'></script>
+    <script src="land.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             const counter3 = document.querySelector(".counter-3");
