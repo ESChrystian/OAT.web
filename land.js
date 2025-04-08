@@ -19,7 +19,10 @@ function iniciarScrollReveal() {
         });
     }
 }
-
+ScrollReveal().reveal('.logo1', {
+    duration:2000,
+    reset:true,
+})
 ScrollReveal().reveal('.box-1', { 
     duration: 1500,
     reset:true,

@@ -178,11 +178,11 @@ b {
 
 
 .cont-pesquisa {
-    padding: 90px;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
 }
 
 .cont-pesquisa button { /*button*/
@@ -197,15 +197,18 @@ b {
     font-weight: bold;
 }
 /* Modal */
+
+#open-modal {
+    position: relative;
+    top: 120px;
+}
 #modal {
-    position: fixed;
-    left: 50%;
-    top: -50%;
-    transform: translate(-50%, 10%);
+    position: relative;
+    transform: translate(50% 110%);
     z-index: 10;
     background-color: #fafafa;
     width: 1200px;
-    max-width: 90%;
+    max-width: 90%; 
     padding: 1.2rem;
     border-radius: 5px;
     
