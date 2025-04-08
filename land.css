@@ -187,7 +187,7 @@ b {
 
 .cont-pesquisa button { /*button*/
     padding: 10px;
-    width: 500px;
+    width: 50%;
     background-color: #fafafa;
     color: black;
     border: none;
@@ -201,6 +201,7 @@ b {
 #open-modal {
     position: relative;
     top: 120px;
+    
 }
 #modal {
     position: relative;
@@ -275,7 +276,7 @@ iframe {
 
 .conteiner {
     width: 100%;
-    padding-bottom: 200px;
+    margin-bottom: 20px;
 }
 .card-list .card-item {
     list-style: none;
@@ -347,4 +348,37 @@ i.card-button {
 
 }
 
+#conteiner-solucao {
+    width: 100%;
+    padding-top: 100px;
+}
+.column {
+    width: 100%;
+    display: flex;
+    color: #fafafa;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items:first baseline;
+}
+
+.box {
+    width: 400px;
+    padding: 50px;
+    line-height: 1.2;
+    text-align: justify;
+}
+
+.titulo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    width: 100%;
+    align-items: center;
+    color: #fafafa;
+}
+
+.titulo img {
+    margin-top: 20px;
+}
 

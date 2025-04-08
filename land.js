@@ -19,6 +19,12 @@ function iniciarScrollReveal() {
         });
     }
 }
+ScrollReveal().reveal(".box", {
+    duration:3000,
+    origin:"bottom",
+    distance:"10px",
+    reset:true
+})
 ScrollReveal().reveal('.logo1', {
     duration:2000,
     reset:true,
