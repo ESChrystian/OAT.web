@@ -73,6 +73,108 @@ body {
     width: 200px;
 }
 
+/* Abrir nav */
+
+#abrir-nav {
+    position: absolute;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+
+.icon-box {
+    position: relative;
+    top: 10px;
+    width: fit-content;
+    height: fit-content;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.icon-box i {
+    z-index: 0;
+    font-size: 30px;
+    color: #fafafa;
+}
+
+/* Navbar */
+.navbar.abrir {
+    opacity: 1;
+
+}
+
+.navbar {
+    opacity: 0;
+    z-index: 1;
+    transition: 0.3s ease;
+    position: relative;
+    width: 100%;
+    height: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    gap: 15px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    align-items: center;
+}
+
+.navbar a.Entrar {
+    display: flex;
+    align-items: center;
+    border: 0.5px solid #fafafa;
+    border-radius: 30px;
+    z-index: 1;
+}
+.Entrar i {
+    z-index: 0;
+    pointer-events: none;
+}
+
+.navbar ul a {
+    color: #fafafa;
+    text-decoration: none;
+    padding: 15px;
+    transition: 0.3s ease;
+    
+}
+
+.navbar a.Entrar:hover {
+    background-color: #fafafa;
+    color: #242424;
+
+}
+
+.navbar .close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fafafa;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 5px;
+    height: fit-content;
+    z-index: 1;
+}
+.close:hover {
+    background-color: #fafafa;
+    color: #242424;
+}
+
+.close i {
+    font-size: 20px;
+    z-index: 0;
+    pointer-events: none;
+}
+
 .loader-2 {
     position: relative;
     background: #fafafa;
@@ -151,8 +253,7 @@ b {
 .header .h1 h1 {
     text-align: center;
     position: relative;
-    top: 80px;
-    margin: 0 10px;
+    left: -10px;
     text-transform: uppercase;
     font-weight: 400;
 }
@@ -183,7 +284,8 @@ b {
     flex-direction: column;
 }
 
-.cont-pesquisa button { /*button*/
+.cont-pesquisa button {
+    /*button*/
     padding: 10px;
     width: 50%;
     background-color: #fafafa;
@@ -194,24 +296,27 @@ b {
     font-size: 1rem;
     font-weight: bold;
 }
+
 /* Modal */
 
 #open-modal {
     position: relative;
     top: 120px;
-    
+
 }
+
 #modal {
     position: relative;
     transform: translate(50% 110%);
     z-index: 10;
     background-color: #fafafa;
     width: 1200px;
-    max-width: 90%; 
+    max-width: 90%;
     padding: 1.2rem;
     border-radius: 5px;
-    
+
 }
+
 iframe {
     width: 100%;
     height: 300px;
@@ -226,7 +331,7 @@ iframe {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.4);
     z-index: 5;
-    
+
 }
 
 #tittle1 {
@@ -272,13 +377,15 @@ iframe {
 }
 
 
-.conteiner {
+.conteinerCarrosel {
     width: 100%;
-    margin-bottom: 20px;
+    margin-bottom:10%;
 }
+
 .card-list .card-item {
     list-style: none;
 }
+
 .card-list .card-item .card-link {
     user-select: none;
     display: block;
@@ -331,8 +438,7 @@ iframe {
     margin: 30px 0 5px;
     background: none;
     cursor: pointer;
-    border: 2px solid #242424 ;
-    transform: rotate(-45deg);
+    border: 2px solid #242424;
     transition: 0.4s ease;
 }
 
@@ -348,20 +454,23 @@ i.card-button {
 
 #conteiner-solucao {
     width: 100%;
-    padding-top: 100px;
+    background-color: #242424;
 }
+
 .column {
     width: 100%;
     display: flex;
     color: #fafafa;
     flex-wrap: wrap;
-    justify-content: space-between;
-    align-items:first baseline;
+    gap: 30px;
+    place-content: center;
+    align-items: first baseline;
+    padding-bottom: 50px;
 }
 
 .box {
-    width: 400px;
-    padding: 50px;
+    width: 350px;
+    padding: 10px;
     line-height: 1.2;
     text-align: justify;
 }
@@ -379,4 +488,3 @@ i.card-button {
 .titulo img {
     margin-top: 20px;
 }
-

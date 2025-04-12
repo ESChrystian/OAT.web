@@ -19,36 +19,39 @@ function iniciarScrollReveal() {
         });
     }
 }
+ScrollReveal().reveal('.icon-box', {
+    delay:7500,
+})
 ScrollReveal().reveal(".box", {
-    duration:3000,
-    origin:"bottom",
-    distance:"10px",
-    reset:true
+    duration: 1300,
+    origin: "bottom",
+    distance: "10px",
+    reset: true
 })
 ScrollReveal().reveal('.logo1', {
-    duration:2000,
-    reset:true,
+    duration: 2000,
+    reset: true,
 })
-ScrollReveal().reveal('.box-1', { 
+ScrollReveal().reveal('.box-1', {
     duration: 1500,
-    reset:true,
-    origin:"bottom",
-    distance:"30px"
+    reset: true,
+    origin: "bottom",
+    distance: "30px"
 });
 
-ScrollReveal().reveal('.box-2', { 
+ScrollReveal().reveal('.box-2', {
     duration: 1500,
-    reset:true,
-    origin:"bottom",
-    distance:"30px"
-    
+    reset: true,
+    origin: "bottom",
+    distance: "30px"
+
 });
-ScrollReveal().reveal('.box-3', { 
+ScrollReveal().reveal('.box-3', {
     duration: 1500,
-    reset:true,
-    origin:"bottom",
-    distance:"30px"
-    
+    reset: true,
+    origin: "bottom",
+    distance: "30px"
+
 });
 
 const openModalButton = document.querySelector("#open-modal");
@@ -63,20 +66,20 @@ const toggleModal = () => {
     el.addEventListener("click", () => toggleModal());
 });
 
- new Swiper('.card-wrapper', {
+new Swiper('.card-wrapper', {
 
     loop: true,
-    spaceBetween:30,
-  
+    spaceBetween: 30,
+
     // If we need pagination
     pagination: {
-      el: '.swiper-pagination',
+        el: '.swiper-pagination',
     },
-  
+
     // Navigation arrows
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
     },
 
     breakpoints: {
@@ -90,4 +93,22 @@ const toggleModal = () => {
             slidesPerView: 3
         },
     }
-  });
+});
+
+
+let iconbox = document.querySelector(".icon-box");
+let iconboxfade = document.getElementById("icon");
+let navbar = document.querySelector(".navbar");
+
+iconbox.addEventListener("click", ()=> {
+    navbar.classList.toggle('abrir');
+    iconboxfade.style.display = "none";
+});
+
+
+let closebox = document.querySelector(".close");
+closebox.addEventListener("click", (e)=>{
+    e.preventDefault();
+    navbar.classList.toggle("abrir");
+    iconboxfade.style.display = "block";
+})
