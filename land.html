@@ -315,17 +315,6 @@
                 amount: 0.1,
             },
         });
-
-        gsap.set(".shape", { scale: 0, opacity: 0 });
-
-gsap.timeline()
-  .to(".circle", { scale: 1, opacity: 1, duration: 0.5, ease: "power2.out" })
-  .to(".triangle", { scale: 1, opacity: 1, duration: 0.5, ease: "power2.out" }, "-=0.3")
-  .to(".square", { scale: 1, opacity: 1, duration: 0.5, ease: "power2.out" }, "-=0.3")
-  .to(".triangle", { scaleX: 10, scaleY: 10, duration: 1, ease: "power4.inOut" })
-  .to(".circle, .square", { opacity: 0, duration: 0.5 }, "-=0.5")
-  .to(".loading-screen", { opacity: 0, duration: 0.5, onComplete: () => document.querySelector(".loading-screen").remove() });
-
     </script>
 
 

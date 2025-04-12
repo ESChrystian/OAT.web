@@ -136,13 +136,6 @@ b {
 }
 
 .header {
-    background-image: url("Ilustração_Sem_Título.tiff");
-    height: 100vh ;
-    width: 100vw;
-
-
-    position: relative;
-    height: 500px;
     width: 100%;
     display: flex;
     align-items: center;
