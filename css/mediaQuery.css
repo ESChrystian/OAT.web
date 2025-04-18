@@ -1,0 +1,36 @@
+/* MediaQuery para responsividade adaptavél a variadas telas */
+
+/* Tela Mobile */
+
+@media (max-width: 400px) {
+    .h1 {
+        left: 0;
+        font-size: 70px;
+    }
+
+    .texto {
+        margin-top: 50px;
+        width: 90%;
+    }
+    #tittle1 {
+        text-align: center;
+    }
+    .galeria {
+        margin-top: 50px;
+    }
+    .cont-pesquisa {
+        height: 30%;
+    }
+
+    #open-modal {
+        position: relative;
+        top: 350px;
+    }
+
+    #modal {
+        transform: translate(0% -10%);
+        top: 100px;
+        z-index: 2;
+        place-content: center;
+    }
+}
