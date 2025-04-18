@@ -10,7 +10,7 @@
 
 function iniciarScrollReveal() {
     if (typeof ScrollReveal !== "undefined") {
-        ScrollReveal().reveal("#img1, #text1, #tittle1, #dobra1, .conteudo", {
+        ScrollReveal().reveal("#img1, #text1, #tittle1, #dobra1", {
             duration: 1600,
             origin: "bottom",
             distance: "30px",
@@ -19,7 +19,7 @@ function iniciarScrollReveal() {
         });
     }
 }
-ScrollReveal().reveal('.icon-box', {
+ScrollReveal().reveal('.icon-box, .conteinerCarrosel', {
     delay:7500,
 })
 ScrollReveal().reveal(".box", {
