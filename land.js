@@ -19,8 +19,11 @@ function iniciarScrollReveal() {
         });
     }
 }
-ScrollReveal().reveal('.icon-box, .conteinerCarrosel', {
-    delay:7500,
+ScrollReveal().reveal("main", {
+    delay:7000,
+})
+ScrollReveal().reveal('.icon-box', {
+    delay:7500
 })
 ScrollReveal().reveal(".box", {
     duration: 1300,
