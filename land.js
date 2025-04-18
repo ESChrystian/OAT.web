@@ -20,7 +20,7 @@ function iniciarScrollReveal() {
     }
 }
 ScrollReveal().reveal('.icon-box, .conteinerCarrosel', {
-    delay:7500,
+    delay:6900,
 })
 ScrollReveal().reveal(".box", {
     duration: 1300,
