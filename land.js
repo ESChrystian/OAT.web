@@ -19,9 +19,18 @@ function iniciarScrollReveal() {
         });
     }
 }
-ScrollReveal().reveal("main", {
-    delay:7000,
-})
+
+document.addEventListener('DOMContentLoaded', function() {
+    const sr = ScrollReveal();
+
+    // Inicializa o ScrollReveal com as configurações desejadas
+    sr.reveal('main', {
+      duration: 7000, // Duração da animação em milissegundos
+      reset: false, // Para que a animação não seja resetada ao sair do viewport
+       // Factor para iniciar a animação no viewport
+    });
+  });
+
 ScrollReveal().reveal('.icon-box', {
     delay:7500
 })

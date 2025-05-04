@@ -77,6 +77,7 @@ body {
 
 #abrir-nav {
     position: absolute;
+    display: block;
     width: 100%;
     height: fit-content;
     display: flex;
@@ -249,13 +250,14 @@ b {
     top: 20px;
     left: -20px;
     color: #fafafa;
-    font-size: 80px;
     width: fit-content;
     margin: 0;
     padding: 0;
     letter-spacing: 0;
    h1 {
     font-weight: 400;
+    font-size: calc(7.375rem + 1.5vw);
+
    }
 }
 
@@ -460,6 +462,7 @@ i.card-button {
 #conteiner-solucao {
     width: 100%;
     background-color: #242424;
+    margin-bottom: 50px;
 }
 
 .column {
@@ -492,4 +495,12 @@ i.card-button {
 
 .titulo img {
     margin-top: 20px;
+}
+
+.bg-body-tertiary {
+    --bs-bg-opacity: 1;
+    background-color: #24242424 !important;
+    color: #fafafa !important;
+    --bs-secondary-color:#fafafa;
+    --bs-emphasis-color:#fafafa;
 }

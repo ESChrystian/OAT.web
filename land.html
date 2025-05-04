@@ -6,6 +6,8 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>OAT </title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel='stylesheet' type='text/css' media='screen' href='css/land.css'>
@@ -32,14 +34,14 @@
 
         </ul>
     </nav>
-    <section class="website-content">
+    <section class="website-content" id="home">
         <div class="h1">
             <h1>OAT</h1>
         </div>
         <div class="header-revealer"></div>
     </section>
     <main>
-        <section class="conteudo">
+        <section class="conteudo" id="conteudo">
             <img src="images/Rectangle 3966 (1).png" id="img1" alt="">
             <div class="texto">
                 <div id="tittle1">
@@ -60,7 +62,7 @@
             </div>
         </section>
 
-        <section class="galeria">
+        <section class="galeria" id="galeria">
             <div class="grid-galeria" id="dobra1">
                 <img src="images/Mídia.jpg" alt="">
                 <img src="images/shared image (5).jpg" alt="">
@@ -71,7 +73,7 @@
             </div>
         </section>
 
-        <section class="cont-pesquisa">
+        <section class="cont-pesquisa" id="pesquisa">
             <button id="open-modal">Problemas Identificados</button>
             <div id="fade"></div>
             <div id="modal">
@@ -93,6 +95,38 @@
                             oportunidades com as ferramentas precisas.
                         </p>
                     </ul>
+                </div>
+            </div>
+        </section>
+        <section id="conteiner-solucao">
+            <div class="titulo">
+                <h1>Solução OAT</h1>
+
+            </div>
+            <div class="column">
+                <div class="box">
+                    <div class="text">
+                        <p>Nosso projeto começa com uma oficina de informática em comunidades carentes. Nessas oficinas,
+                            crianças e adolescentes terão aulas práticas, aprendendo o funcionamento de um computador
+                            desde o básico: como cada peça funciona e como tudo se conecta. Durante o curso, cada aluno
+                            vai desmontar e montar seu próprio computador, entendendo o processo de construção de uma
+                            máquina funcional.</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="text">
+                        <p>No final da oficina, o aluno não só terá aprendido uma nova habilidade, mas também receberá o
+                            computador que ele mesmo montou, junto com um certificado de conclusão.
+                            Depois disso, os alunos terão acesso à nossa plataforma de cursos profissionalizantes.</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="text">
+                        <p> Essa plataforma será o ponto central do projeto, oferecendo cursos em áreas com alta demanda
+                            no mercado de trabalho. Os alunos poderão escolher os cursos que mais combinam com seus
+                            interesses e terão acesso a conteúdos apresentados de maneira inovadora, com narrativas
+                            cativantes e recursos visuais de alta qualidade.</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -132,11 +166,11 @@
                         </a>
                     </li>
                     <li class="card-item swiper-slide">
-                        <a href="" class="card-link">
-                            <img src="images/canva1.png" alt="" class="card-image">
+                        <a href="doc/User Stories - Proposta de Solução - Time.docx" class="card-link" download="User Stories">
+                            <img src="images/user-stories.png" alt="" class="card-image">
                             <p class="badge">Documento Canva</p>
-                            <h2 class="card-title">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati,
-                                iusto!</h2>
+                            <h2 class="card-title">As funcionalidades foram feitas e corrigidas a partir deste documento.<br>
+                                    </h2><span style="color: black;">Demais documentos ajudaram a criar as necessidades desses usuários.</span>
                             <i class='card-button bx bxs-download'></i>
                         </a>
                     </li>
@@ -149,39 +183,33 @@
 
 
         <!-- Solucão Oat -->
-        <section id="conteiner-solucao">
-            <div class="titulo">
-                <h1>Solução OAT</h1>
-
-            </div>
-            <div class="column">
-                <div class="box">
-                    <div class="text">
-                        <p>Nosso projeto começa com uma oficina de informática em comunidades carentes. Nessas oficinas,
-                            crianças e adolescentes terão aulas práticas, aprendendo o funcionamento de um computador
-                            desde o básico: como cada peça funciona e como tudo se conecta. Durante o curso, cada aluno
-                            vai desmontar e montar seu próprio computador, entendendo o processo de construção de uma
-                            máquina funcional.</p>
+        <footer class="bd-footer py-4 py-md-5 mt-5 bg-body-tertiary --bs-dark">
+            <div class="container py-4 py-md-5 px-4 px-md-3 text-body-secondary">
+                <div class="row">
+                    <div class="col-lg-3 mb-3">
+                        <a class="d-inline-flex align-items-center mb-2 text-body-emphasis text-decoration-none"
+                            href="/" aria-label="OAT">
+                            <span class="fs-5">OAT</span>
+                        </a>
+                        <ul class="list-unstyled small">
+                            <li class="mb-2">Somos uma plataforma de cursos gratuitos online</li>
+                            <li class="mb-2">Currently v1</li>
+                        </ul>
+                    </div>
+                    <div class="col-6 col-lg-2 offset-lg-1 mb-3">
+                        <h5>Voltar Seção</h5>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><a href="#abrir-nav">Home</a></li>
+                            <li class="mb-2"><a href="#conteudo">Sobre</a></li>
+                            <li class="mb-2"><a href="#galeria">Galeria</a></li>
+                            <li class="mb-2"><a href="#pesquisa">Pesquisa</a></li>
+                            <li class="mb-2"><a href="#conteiner-solucao">Soluções</a></li>
+                        </ul>
                     </div>
                 </div>
-                <div class="box">
-                    <div class="text">
-                        <p>No final da oficina, o aluno não só terá aprendido uma nova habilidade, mas também receberá o
-                            computador que ele mesmo montou, junto com um certificado de conclusão.
-                            Depois disso, os alunos terão acesso à nossa plataforma de cursos profissionalizantes.</p>
-                    </div>
-                </div>
-                <div class="box">
-                    <div class="text">
-                        <p> Essa plataforma será o ponto central do projeto, oferecendo cursos em áreas com alta demanda
-                            no mercado de trabalho. Os alunos poderão escolher os cursos que mais combinam com seus
-                            interesses e terão acesso a conteúdos apresentados de maneira inovadora, com narrativas
-                            cativantes e recursos visuais de alta qualidade.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+        </footer>
     </main>
+
 
     <!-- Animação Inicial -->
     <div class="loading-screen">
