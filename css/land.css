@@ -499,7 +499,7 @@ i.card-button {
 
 .bg-body-tertiary {
     --bs-bg-opacity: 1;
-    background-color: #24242424 !important;
+    background-color: #121212 !important;
     color: #fafafa !important;
     --bs-secondary-color:#fafafa;
     --bs-emphasis-color:#fafafa;
