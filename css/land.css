@@ -411,3 +411,13 @@ i.card-button {
 .accordion-body img {
     width: 40%;
 }
+
+.accordion-body ul {
+    list-style: none;
+    
+}
+
+.accordion-body.insights {
+    display: flex;
+    flex-direction: column;
+}
