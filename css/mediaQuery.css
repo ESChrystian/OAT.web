@@ -58,4 +58,11 @@
     .column {
         gap: 0px;
     }
+    .accordion-body {
+        flex-direction: column;
+        place-content: center;
+    }
+    .accordion-body img {
+       width: 100%;
+    }
 }
