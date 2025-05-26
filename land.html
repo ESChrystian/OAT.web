@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel='stylesheet' type='text/css' media='screen' href='css/land.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='css/mediaQuery.css'>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -159,28 +161,90 @@
         </section>
         <section class="conteiner-pesquisas">
             <div class="accordion" id="accordionPanelsStayOpenExample">
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="panelsStayOpen-headingOne">
-                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
-                            aria-controls="panelsStayOpen-collapseOne">
-                            Gráficos da Pesquisa de Campo
-                        </button>
-                    </h2>
-                    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show"
-                        aria-labelledby="panelsStayOpen-headingOne">
-                        <div class="accordion-body">
-                            <img src="images/graf-renda.png" alt="">
-                            <img src="images/graf-computador.png" alt="">
-                            <img src="images/graf-dificuldade-progamacao.png" alt="">
-                            <img src="images/graf-feedback.png" alt="">
-                            <img src="images/graf-genero.png" alt="">
-                            <img src="images/graf-idade.png" alt="">
-                            <img src="images/graf-interesse.png" alt="">
-                            <img src="images/graf-instituicao.png" alt="">
-                            <img src="images/graf-instituicao.png" alt="">
-                        </div>
-                    </div>
+              
+
+// codigo dos dash
+
+
+<style>
+    :root {
+      --bg-color: #000000;
+      --card-bg: rgba(255, 255, 255, 0.05);
+      --accent: #FE0000;
+      --text-color: #e6edf3;
+      --font: 'Outfit', sans-serif;
+      --shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+      --border: rgba(255, 255, 255, 0.1);
+        }
+
+        
+    .titulododash {
+      font-size: 2.8rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, #FE0000, #1230F0);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 40px;
+      text-align: center;
+    }
+    .dashboard {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 30px;
+      width: 100%;
+      max-width: 1600px;
+      padding: 5vw;
+    }
+    .card {
+      background: #000000;
+      backdrop-filter: blur(15px);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 20px;
+      box-shadow: var(--shadow);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 350px;
+      justify-content: space-between;
+    }
+    .card h3 {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+      color: var(--accent);
+      text-align: center;
+    }
+    .chart-container {
+      position: relative;
+      width: 90%;
+      height: 200px;
+    }
+    canvas {
+      position: absolute;
+      width: 100% !important;
+      height: 100% !important;
+    }
+  </style>
+<h1 class="titulododash">📊 Dashboard Pesquisa OAT</h1>
+<div class="dashboard">
+  <div class="card"><h3>Idade</h3><div class="chart-container"><canvas id="idadeChart"></canvas></div></div>
+  <div class="card"><h3>Ocupação</h3><div class="chart-container"><canvas id="ocupacaoChart"></canvas></div></div>
+  <div class="card"><h3>Região</h3><div class="chart-container"><canvas id="regiaoChart"></canvas></div></div>
+  <div class="card"><h3>Renda Familiar</h3><div class="chart-container"><canvas id="rendaChart"></canvas></div></div>
+  <div class="card"><h3>Acesso a Computador</h3><div class="chart-container"><canvas id="acessoChart"></canvas></div></div>
+  <div class="card"><h3>Acesso à Internet</h3><div class="chart-container"><canvas id="internetChart"></canvas></div></div>
+  <div class="card"><h3>Curso Online</h3><div class="chart-container"><canvas id="cursoChart"></canvas></div></div>
+  <div class="card"><h3>Motivo da Não Conclusão</h3><div class="chart-container"><canvas id="motivoChart"></canvas></div></div>
+  <div class="card"><h3>Desmotivadores</h3><div class="chart-container"><canvas id="desmotivaChart"></canvas></div></div>
+  <div class="card"><h3>Interesse no Curso</h3><div class="chart-container"><canvas id="interesseChart"></canvas></div></div>
+  <div class="card"><h3>Motivadores</h3><div class="chart-container"><canvas id="motivaChart"></canvas></div></div>
+  <div class="card"><h3>Impacto no Trabalho</h3><div class="chart-container"><canvas id="impactoChart"></canvas></div></div>
+</div>
+
+
+
+
+
                 </div>
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
@@ -442,6 +506,55 @@
             },
         });
     </script>
+
+//script dos dash
+
+
+
+
+<script>
+    function createChart(id, type, labels, data, colors) {
+      new Chart(document.getElementById(id), {
+        type: type,
+        data: {
+          labels: labels,
+          datasets: [{
+            data: data,
+            backgroundColor: colors,
+            borderColor: colors,
+            borderWidth: 1
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: { legend: { position: 'bottom' } },
+          scales: type === 'bar' ? { y: { beginAtZero: true } } : {}
+        }
+      });
+    }
+    
+    createChart('idadeChart', 'bar', ['<18', '18–24', '25–34'], [6, 4, 1], ['#FE0000','#1230F0','#00E800']);
+    createChart('ocupacaoChart', 'doughnut', ['Estudante', 'CLT', 'Aposentada'], [8, 2, 1], ['#FFAD01','#1230F0','#F98301']);
+    createChart('regiaoChart', 'bar', ['Norte', 'Sul', 'Centro-Oeste'], [8, 1, 1], ['#00E800','#07DFDF','#F98301']);
+    createChart('rendaChart', 'bar', ['Até R$2k', 'R$2k–5k', 'R$5k–10k', 'Prefiro não dizer'], [2, 7, 1, 1], ['#F98301','#FFAD01','#8BE622','#07DFDF']);
+    createChart('acessoChart', 'doughnut', ['Sim', 'Não', 'Ocasional'], [4, 1, 5], ['#00E800','#FE0000','#07DFDF']);
+    createChart('internetChart', 'pie', ['Celular', 'Computador'], [9, 1], ['#FF3D02','#1230F0']);
+    createChart('cursoChart', 'bar', ['Concluiu', 'Não concluiu', 'Nunca fez'], [1, 6, 3], ['#8BE622','#FE0000','#F98301']);
+    createChart('motivoChart', 'doughnut', ['Falta de tempo', 'Sem acesso', 'Sem motivação', 'Outro'], [2, 1, 2, 1], ['#FFAD01','#FF3D02','#F98301','#07DFDF']);
+    createChart('desmotivaChart', 'bar', ['Aulas chatas', 'Sem suporte', 'Sem PC', 'Cursos longos'], [6, 4, 3, 2], ['#FE0000','#07DFDF','#1230F0','#FFAD01']);
+    createChart('interesseChart', 'pie', ['Sim', 'Talvez'], [6, 5], ['#00E800','#FFAD01']);
+    createChart('motivaChart', 'bar', ['Ganhar PC', 'Aula prática', 'Melhorar currículo'], [5, 5, 1], ['#1230F0','#07DFDF','#8BE622']);
+    createChart('impactoChart', 'bar', ['Sim', 'Talvez', 'Não sei', 'Não'], [6, 2, 2, 1], ['#00E800','#FFAD01','#F98301','#FE0000']);
+    </script>
+
+
+
+
+
+
+
+
 
 
 
