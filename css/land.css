@@ -224,7 +224,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 40px;
+    padding: 90px;
     background: #242424;
     margin-top: 150px;
 
@@ -245,7 +245,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 30px;
+    gap: 5px;
     flex-wrap: wrap;
 }
 
