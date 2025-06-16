@@ -13,7 +13,7 @@
     <link rel='stylesheet' type='text/css' media='screen' href='css/land.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='css/mediaQuery.css'>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -106,13 +106,14 @@
                 </div>
             </div>
         </section>
-        <!-- Swipper Carrosel -->
+        <!-- Swipper Carrossel -->
+        <h1 class="carrossel-tittle">Documentação</h1>
         <section class="conteinerCarrosel swiper">
             <div class="card-wrapper">
                 <ul class="card-list swiper-wrapper">
                     <li class="card-item swiper-slide">
-                        <a href="https://docs.google.com/document/d/1n1FydqYPNaAffFamFS8GzhDBOyJjEEdO1OOaoEOEdv4/edit?tab=t.0" target="_blank"
-                            class="card-link">
+                        <a href="https://docs.google.com/document/d/1n1FydqYPNaAffFamFS8GzhDBOyJjEEdO1OOaoEOEdv4/edit?tab=t.0"
+                            target="_blank" class="card-link">
                             <img src="images/canva1.png" alt="" class="card-image">
                             <p class="badge">Documento Canva</p>
                             <h2 class="card-title">Em forma visual, conheça as informações esseciais para o projeto!
@@ -121,7 +122,8 @@
                         </a>
                     </li>
                     <li class="card-item swiper-slide">
-                        <a href="images/Matriz de esforço e impacto - Impacto_Viabilidade.jpg" class="card-link" target="_blank">
+                        <a href="images/Matriz de esforço e impacto - Impacto_Viabilidade.jpg" class="card-link"
+                            target="_blank">
                             <img src="images/Matriz de esforço e impacto - Impacto_Viabilidade.jpg" alt=""
                                 class="card-image">
                             <p class="badge">Matriz de Esforço X Impacto</p>
@@ -132,8 +134,8 @@
                         </a>
                     </li>
                     <li class="card-item swiper-slide">
-                        <a href="https://docs.google.com/document/d/1-RcxNSK6WDOTaHBp2_IUQUV9S_7CXhRfI0tj5PMKN1o/edit?tab=t.0" target="_blank"
-                            class="card-link">
+                        <a href="https://docs.google.com/document/d/1-RcxNSK6WDOTaHBp2_IUQUV9S_7CXhRfI0tj5PMKN1o/edit?tab=t.0"
+                            target="_blank" class="card-link">
                             <img src="images/investigacao_social.png" alt="" class="card-image">
                             <p class="badge">Investigação Social</p>
                             <h2 class="card-title">Leia a pesquisa Investigação Social! Entenda quais pesquisas serviram
@@ -142,8 +144,8 @@
                         </a>
                     </li>
                     <li class="card-item swiper-slide">
-                        <a href="https://docs.google.com/document/d/1RAKDgsagXR5XLCg4AhgAOEt6bscr24B1r0RMmk88VfY/edit?tab=t.0" target="_blank"
-                            class="card-link">
+                        <a href="https://docs.google.com/document/d/1RAKDgsagXR5XLCg4AhgAOEt6bscr24B1r0RMmk88VfY/edit?tab=t.0"
+                            target="_blank" class="card-link">
                             <img src="images/user-stories.png" alt="" class="card-image">
                             <p class="badge">User Stories</p>
                             <h2 class="card-title">As funcionalidades foram feitas e corrigidas a partir deste
@@ -158,157 +160,122 @@
                 <div class="swiper-button-next"></div>
             </div>
         </section>
-        <section class="conteiner-pesquisas">
-            <div class="accordion" id="accordionPanelsStayOpenExample">
-              
+        <style>
+            :root {
+                --bg-color: #000000;
+                --card-bg: rgba(255, 255, 255, 0.05);
+                --accent: #FE0000;
+                --text-color: #e6edf3;
+                --font: 'Outfit', sans-serif;
+                --shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+                --border: rgba(255, 255, 255, 0.1);
+            }
 
 
-<style>
-    :root {
-      --bg-color: #000000;
-      --card-bg: rgba(255, 255, 255, 0.05);
-      --accent: #FE0000;
-      --text-color: #e6edf3;
-      --font: 'Outfit', sans-serif;
-      --shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-      --border: rgba(255, 255, 255, 0.1);
-        }
+            .titulododash {
+                font-size: 2.8rem;
+                font-weight: 800;
+                background: linear-gradient(135deg, #FE0000, #1230F0);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                margin-bottom: 40px;
+                text-align: center;
+            }
 
-        
-    .titulododash {
-      font-size: 2.8rem;
-      font-weight: 800;
-      background: linear-gradient(135deg, #FE0000, #1230F0);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      margin-bottom: 40px;
-      text-align: center;
-    }
-    .dashboard {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 30px;
-      width: 100%;
-      max-width: 1600px;
-      padding: 5vw;
-    }
-    .card {
-      background: #000000;
-      backdrop-filter: blur(15px);
-      border: 1px solid var(--border);
-      border-radius: 20px;
-      padding: 20px;
-      box-shadow: var(--shadow);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      height: 350px;
-      justify-content: space-between;
-    }
-    .card h3 {
-      font-size: 1.2rem;
-      margin-bottom: 10px;
-      color: var(--accent);
-      text-align: center;
-    }
-    .chart-container {
-      position: relative;
-      width: 90%;
-      height: 200px;
-    }
-    canvas {
-      position: absolute;
-      width: 100% !important;
-      height: 100% !important;
-    }
-  </style>
-<h1 class="titulododash">📊 Dashboard Pesquisa OAT</h1>
-<div class="dashboard">
-  <div class="card"><h3>Idade</h3><div class="chart-container"><canvas id="idadeChart"></canvas></div></div>
-  <div class="card"><h3>Ocupação</h3><div class="chart-container"><canvas id="ocupacaoChart"></canvas></div></div>
-  <div class="card"><h3>Região</h3><div class="chart-container"><canvas id="regiaoChart"></canvas></div></div>
-  <div class="card"><h3>Renda Familiar</h3><div class="chart-container"><canvas id="rendaChart"></canvas></div></div>
-  <div class="card"><h3>Acesso a Computador</h3><div class="chart-container"><canvas id="acessoChart"></canvas></div></div>
-  <div class="card"><h3>Acesso à Internet</h3><div class="chart-container"><canvas id="internetChart"></canvas></div></div>
-  <div class="card"><h3>Curso Online</h3><div class="chart-container"><canvas id="cursoChart"></canvas></div></div>
-  <div class="card"><h3>Motivo da Não Conclusão</h3><div class="chart-container"><canvas id="motivoChart"></canvas></div></div>
-  <div class="card"><h3>Desmotivadores</h3><div class="chart-container"><canvas id="desmotivaChart"></canvas></div></div>
-  <div class="card"><h3>Interesse no Curso</h3><div class="chart-container"><canvas id="interesseChart"></canvas></div></div>
-  <div class="card"><h3>Motivadores</h3><div class="chart-container"><canvas id="motivaChart"></canvas></div></div>
-  <div class="card"><h3>Impacto no Trabalho</h3><div class="chart-container"><canvas id="impactoChart"></canvas></div></div>
-</div>
+            .dashboard {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+                gap: 30px;
+                width: 100%;
+                max-width: 1600px;
+                padding: 5vw;
+            }
 
+            .card {
+                background: #000000;
+                backdrop-filter: blur(15px);
+                border: 1px solid var(--border);
+                border-radius: 20px;
+                padding: 20px;
+                box-shadow: var(--shadow);
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                height: 350px;
+                justify-content: space-between;
+            }
 
+            .card h3 {
+                font-size: 1.2rem;
+                margin-bottom: 10px;
+                color: var(--accent);
+                text-align: center;
+            }
 
+            .chart-container {
+                position: relative;
+                width: 90%;
+                height: 200px;
+            }
 
-
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
-                            aria-controls="panelsStayOpen-collapseTwo">
-                            Documentação da Pesquisa
-                        </button>
-                    </h2>
-                    <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse"
-                        aria-labelledby="panelsStayOpen-headingTwo">
-                        <div class="accordion-body">
-                            <p>Este documento é referente aos insights identificados com as pesquisas de campo com o app
-                                Google Forms, somando 36 respostas gerando dados com base no público-alvo.
-                                Público-Alvo
-                                Os entrevistados esperados possuem características identificadas a partir das
-                                investigações sociais e validação de personas existentes na sociedade.
-                                Esperado:
-
-                            </p>
-                            <ul style="list-style: none;">
-                                <li>Idade: 13 á 20</li>
-                                <li>Genêro: Masculino e Feminino</li>
-                                <li>Estratificação Social: Classe C, D e E </li>
-                                <li>Ocupação: Estudante</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="panelsStayOpen-headingThree">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
-                            aria-controls="panelsStayOpen-collapseTwo">
-                            Insights da Pesquisa
-                        </button>
-                    </h2>
-                    <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse"
-                        aria-labelledby="panelsStayOpen-headingTwo">
-                        <div class="accordion-body insights">
-                            <h3>insights Positivos</h3>
-                            <ul style="list-style: none;">
-                                <li>- 72% dos entrevistados possuem interesse em receber cursos online de programação;
-                                </li>
-                                <li>- 75% dos pesquisados preferem receber feedback ativo dos professores;</li>
-                                <li>- Em três níveis de importância, Pouco importante, Importante e Muito Importante.
-                                    50%</li>
-                                <li>- Os candidados em sua maioria não enfretam condições sociais abaixo á linha da
-                                    pobreza;</li>
-                                <li>- O projeto é importante para maioria dos entrevistados;</li>
-                                <li>- A maior parte dos entrevistados possuem interesse no projeto.</li>
-                                <li></li>
-                                <li></li>
-                            </ul>
-
-                            <h3>Insights Negativos</h3>
-
-                            <ul style="list-style: none;">
-                                <li>- As pesquisas receberam poucos candidatos do público de classe D e E;</li>
-                                <li>- As pesquisas receberam poucos candidatos do público de instituições públicas.</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
+            canvas {
+                position: absolute;
+                width: 100% !important;
+                height: 100% !important;
+            }
+        </style>
+        <h1 class="titulododash" id="dashboard">📊 Dashboard Pesquisa OAT</h1>
+        <div class="dashboard">
+            <div class="card">
+                <h3>Idade</h3>
+                <div class="chart-container"><canvas id="idadeChart"></canvas></div>
             </div>
-        </section>
+            <div class="card">
+                <h3>Ocupação</h3>
+                <div class="chart-container"><canvas id="ocupacaoChart"></canvas></div>
+            </div>
+            <div class="card">
+                <h3>Região</h3>
+                <div class="chart-container"><canvas id="regiaoChart"></canvas></div>
+            </div>
+            <div class="card">
+                <h3>Renda Familiar</h3>
+                <div class="chart-container"><canvas id="rendaChart"></canvas></div>
+            </div>
+            <div class="card">
+                <h3>Acesso a Computador</h3>
+                <div class="chart-container"><canvas id="acessoChart"></canvas></div>
+            </div>
+            <div class="card">
+                <h3>Acesso à Internet</h3>
+                <div class="chart-container"><canvas id="internetChart"></canvas></div>
+            </div>
+            <div class="card">
+                <h3>Curso Online</h3>
+                <div class="chart-container"><canvas id="cursoChart"></canvas></div>
+            </div>
+            <div class="card">
+                <h3>Motivo da Não Conclusão</h3>
+                <div class="chart-container"><canvas id="motivoChart"></canvas></div>
+            </div>
+            <div class="card">
+                <h3>Desmotivadores</h3>
+                <div class="chart-container"><canvas id="desmotivaChart"></canvas></div>
+            </div>
+            <div class="card">
+                <h3>Interesse no Curso</h3>
+                <div class="chart-container"><canvas id="interesseChart"></canvas></div>
+            </div>
+            <div class="card">
+                <h3>Motivadores</h3>
+                <div class="chart-container"><canvas id="motivaChart"></canvas></div>
+            </div>
+            <div class="card">
+                <h3>Impacto no Trabalho</h3>
+                <div class="chart-container"><canvas id="impactoChart"></canvas></div>
+            </div>
+        </div>
+
 
 
         <!-- Solucão Oat -->
@@ -331,8 +298,8 @@
                             <li class="mb-2"><a href="#abrir-nav">Home</a></li>
                             <li class="mb-2"><a href="#conteudo">Sobre</a></li>
                             <li class="mb-2"><a href="#galeria">Galeria</a></li>
-                            <li class="mb-2"><a href="#pesquisa">Pesquisa</a></li>
                             <li class="mb-2"><a href="#conteiner-solucao">Soluções</a></li>
+                            <li class="mb-2"><a href="#dashboard">Dashboard</a></li>
                         </ul>
                     </div>
                 </div>
@@ -505,40 +472,40 @@
     </script>
 
 
-<script>
-    function createChart(id, type, labels, data, colors) {
-      new Chart(document.getElementById(id), {
-        type: type,
-        data: {
-          labels: labels,
-          datasets: [{
-            data: data,
-            backgroundColor: colors,
-            borderColor: colors,
-            borderWidth: 1
-          }]
-        },
-        options: {
-          responsive: true,
-          maintainAspectRatio: false,
-          plugins: { legend: { position: 'bottom' } },
-          scales: type === 'bar' ? { y: { beginAtZero: true } } : {}
+    <script>
+        function createChart(id, type, labels, data, colors) {
+            new Chart(document.getElementById(id), {
+                type: type,
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        data: data,
+                        backgroundColor: colors,
+                        borderColor: colors,
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: { legend: { position: 'bottom' } },
+                    scales: type === 'bar' ? { y: { beginAtZero: true } } : {}
+                }
+            });
         }
-      });
-    }
-    
-    createChart('idadeChart', 'bar', ['<18', '18–24', '25–34'], [6, 4, 1], ['#FE0000','#1230F0','#00E800']);
-    createChart('ocupacaoChart', 'doughnut', ['Estudante', 'CLT', 'Aposentada'], [8, 2, 1], ['#FFAD01','#1230F0','#F98301']);
-    createChart('regiaoChart', 'bar', ['Norte', 'Sul', 'Centro-Oeste'], [8, 1, 1], ['#00E800','#07DFDF','#F98301']);
-    createChart('rendaChart', 'bar', ['Até R$2k', 'R$2k–5k', 'R$5k–10k', 'Prefiro não dizer'], [2, 7, 1, 1], ['#F98301','#FFAD01','#8BE622','#07DFDF']);
-    createChart('acessoChart', 'doughnut', ['Sim', 'Não', 'Ocasional'], [4, 1, 5], ['#00E800','#FE0000','#07DFDF']);
-    createChart('internetChart', 'pie', ['Celular', 'Computador'], [9, 1], ['#FF3D02','#1230F0']);
-    createChart('cursoChart', 'bar', ['Concluiu', 'Não concluiu', 'Nunca fez'], [1, 6, 3], ['#8BE622','#FE0000','#F98301']);
-    createChart('motivoChart', 'doughnut', ['Falta de tempo', 'Sem acesso', 'Sem motivação', 'Outro'], [2, 1, 2, 1], ['#FFAD01','#FF3D02','#F98301','#07DFDF']);
-    createChart('desmotivaChart', 'bar', ['Aulas chatas', 'Sem suporte', 'Sem PC', 'Cursos longos'], [6, 4, 3, 2], ['#FE0000','#07DFDF','#1230F0','#FFAD01']);
-    createChart('interesseChart', 'pie', ['Sim', 'Talvez'], [6, 5], ['#00E800','#FFAD01']);
-    createChart('motivaChart', 'bar', ['Ganhar PC', 'Aula prática', 'Melhorar currículo'], [5, 5, 1], ['#1230F0','#07DFDF','#8BE622']);
-    createChart('impactoChart', 'bar', ['Sim', 'Talvez', 'Não sei', 'Não'], [6, 2, 2, 1], ['#00E800','#FFAD01','#F98301','#FE0000']);
+
+        createChart('idadeChart', 'bar', ['<18', '18–24', '25–34'], [6, 4, 1], ['#FE0000', '#1230F0', '#00E800']);
+        createChart('ocupacaoChart', 'doughnut', ['Estudante', 'CLT', 'Aposentada'], [8, 2, 1], ['#FFAD01', '#1230F0', '#F98301']);
+        createChart('regiaoChart', 'bar', ['Norte', 'Sul', 'Centro-Oeste'], [8, 1, 1], ['#00E800', '#07DFDF', '#F98301']);
+        createChart('rendaChart', 'bar', ['Até R$2k', 'R$2k–5k', 'R$5k–10k', 'Prefiro não dizer'], [2, 7, 1, 1], ['#F98301', '#FFAD01', '#8BE622', '#07DFDF']);
+        createChart('acessoChart', 'doughnut', ['Sim', 'Não', 'Ocasional'], [4, 1, 5], ['#00E800', '#FE0000', '#07DFDF']);
+        createChart('internetChart', 'pie', ['Celular', 'Computador'], [9, 1], ['#FF3D02', '#1230F0']);
+        createChart('cursoChart', 'bar', ['Concluiu', 'Não concluiu', 'Nunca fez'], [1, 6, 3], ['#8BE622', '#FE0000', '#F98301']);
+        createChart('motivoChart', 'doughnut', ['Falta de tempo', 'Sem acesso', 'Sem motivação', 'Outro'], [2, 1, 2, 1], ['#FFAD01', '#FF3D02', '#F98301', '#07DFDF']);
+        createChart('desmotivaChart', 'bar', ['Aulas chatas', 'Sem suporte', 'Sem PC', 'Cursos longos'], [6, 4, 3, 2], ['#FE0000', '#07DFDF', '#1230F0', '#FFAD01']);
+        createChart('interesseChart', 'pie', ['Sim', 'Talvez'], [6, 5], ['#00E800', '#FFAD01']);
+        createChart('motivaChart', 'bar', ['Ganhar PC', 'Aula prática', 'Melhorar currículo'], [5, 5, 1], ['#1230F0', '#07DFDF', '#8BE622']);
+        createChart('impactoChart', 'bar', ['Sim', 'Talvez', 'Não sei', 'Não'], [6, 2, 2, 1], ['#00E800', '#FFAD01', '#F98301', '#FE0000']);
     </script>
 
 
